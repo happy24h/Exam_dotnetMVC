@@ -1,0 +1,74 @@
+﻿@model project_asm.Models.Exam
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Exam</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Faculty.FacultyName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Faculty.FacultyName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Room.RoomName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Room.RoomName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Subject.SubjectName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Subject.SubjectName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StartTime)
+        </dt>
+
+        <dd>
+            @Convert.ToDateTime(Model.StartTime).ToString("HH:mm")
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExamDate)
+        </dt>
+
+        <dd>
+            @Convert.ToDateTime(Model.ExamDate).ToString("dd/MM/yyyy")
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExamDuration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExamDuration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ExamId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
